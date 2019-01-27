@@ -11,3 +11,6 @@ I have uploaded an implementation in C and java.
 My C implementation comes from an assignment in 2nd year and I haven't tested it since, so I
 decided to implement it again in java instead, using the same ideas found in the C implementation.
 
+The GameMain class holds the main method, which takes in user input to create the board and run
+the evolutions a number of times, using methods in the GameOfLife class.
+
