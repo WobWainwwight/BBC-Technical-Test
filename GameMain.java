@@ -1,3 +1,5 @@
+// Rob Wainwright - BBC Application - Jan 2018
+// Please read the readme on the Github page for assumptions and notes
 import java.util.*;
 public class GameMain {  
   public static void main(String[] args){
@@ -21,7 +23,8 @@ public class GameMain {
     game.randomiseBoard();
     System.out.println("The initial, randomised board:");
     game.printBoard();
-
+    
+    // evolves until we've done all the iterations or until the board is dead
     for(int i = 0; i<iterations; i++){
       if(game.getStatus() == false){
         System.out.println("All cells are dead after "+i+" cycles:");

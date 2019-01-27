@@ -1,3 +1,5 @@
+// Rob Wainwright - BBC Application - Jan 2018
+// Please read the readme on the Github page for assumptions and notes
 public class GameOfLife{
   private int rows = 0;
   private int columns = 0;
@@ -97,6 +99,8 @@ public class GameOfLife{
             liveNeighbCount++;
           }
         }
+        // if cell is dead, check if it has three neighbours
+        // if it does then the cell becomes alive
         if(board[i][j] == false){
           deadCells++;
           if(liveNeighbCount == 3){
@@ -107,6 +111,7 @@ public class GameOfLife{
           }
         }
         else{
+          //cell only survives if it has 2 or 3 live neighbours
           if(liveNeighbCount == 2 || liveNeighbCount == 3){
             newBoard[i][j] = true;
           }
